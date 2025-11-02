@@ -70,7 +70,7 @@ class Parsian(BaseBank):
 
         data = self.get_pay_data()
         client = self._get_pay_client()
-        response = client.service.SalePayment(**data)
+        response = client.service.SalePaymentRequest(**data)
         try:
             status = response.Status
             token = response.Token
