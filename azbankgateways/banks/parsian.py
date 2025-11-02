@@ -52,7 +52,7 @@ class Parsian(BaseBank):
     def get_pay_data(self):
         data = {
             "requestData" : {
-                "LoginAccount": int(self._login_account),
+                "LoginAccount": self._login_account,
                 "Originator": self.get_mobile_number(),
                 "OrderId": int(self.get_tracking_code()),
                 "Amount": int(self.get_gateway_amount()),
